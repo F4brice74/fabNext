@@ -37,9 +37,8 @@ export const getStaticProps = async ({ params }) => {
   if (loading) return <div className="circularProgress"><CircularProgress size={200}/></div>
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   const  refstatic  = data.references;
-  console.log(refstatic)
-  return { props: { refstatic } //we fetched the userInfo and we have access to it in [id].tsx component props
-    }
+  console.log("refstatic from index", refstatic)
+  return { props: { refstatic }    }
 
   };
 

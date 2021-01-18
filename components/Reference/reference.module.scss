@@ -1,0 +1,52 @@
+@import 'styles/color.scss';
+
+.reference_img_intro {
+    width: 100%;
+    padding-top: 20px;
+}
+.reference_global {
+    padding-top: 50px
+}
+.reference_h1 {
+ background-color: blue($color: #000000);
+    
+}
+    
+.reference_bg {
+    background-color: rgb(241, 247, 252);
+    height: 100%;
+    // padding-top: 50px
+}
+
+.reference_title {
+    background-color: #0d4c80;
+    text-align: center;
+    h1 {
+    display: inline-block;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    }   
+}
+
+.reference_content {
+    padding-top: 2em;
+    padding-bottom : 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    li{
+        font-size: 1em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        list-style-type: disc;
+        line-height: 1.5em;
+    }
+    a {
+        color: rgb(34, 34, 94);
+        text-decoration: underline;
+    }
+    p {
+        text-align: justify;
+        text-justify:inter-word;
+        }   
+}
+

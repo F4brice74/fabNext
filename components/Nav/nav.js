@@ -28,7 +28,7 @@ const Nav = () => {
   };
 
   return (
-    <Grid item xs={12} container justify="left">
+    <Grid item xs={12} container justify="flex-start">
       <Toolbar
         className={styles.desktopAppbar}>
         <Link href="/#home"><a className={`${styles.btn} ${styles.from_center}`}>Hello</a></Link>
