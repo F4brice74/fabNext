@@ -9,8 +9,7 @@ import styles from "./reference.module.scss"
 
 
 const Reference = ({ theref }) => {
-    console.log("theref from component reference", theref)
-
+  
     return (
         <Grid
             container

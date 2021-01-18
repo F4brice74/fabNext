@@ -1,0 +1,18 @@
+.articles_bg {
+    background-color: #0f6d92;
+   height: 100vh;
+    //position: fixed;
+}
+
+.articles_paragraphe {
+    font-size: 1.2em;
+    text-justify: auto;
+    color: white;
+}
+
+@media (max-width: 499px) {
+    .articles_bg {
+        background-color: #0f6d92;
+        height: 100%;
+    }
+}
