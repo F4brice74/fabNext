@@ -33,16 +33,8 @@ const useStyles = makeStyles({
 
 
 
-const References = () => {
+const References = ({refstatic} ) => {
     const classes = useStyles();
-    const { loading, error, data} = useQuery(REFERENCES_QUERY);
-    
-    console.log(data)
-    if (loading) return <div className="circularProgress"><CircularProgress size={200}/></div>
-    if (error) return <p>Error: {JSON.stringify(error)}</p>;
-    
-    const { references } = data;
-  
     
     return (
         
@@ -54,7 +46,7 @@ const References = () => {
             justify="center"
             className={styles.references_bg}
         >
-        {console.log(references)}
+        
             <Grid item xs={10} md={8}>
                 <h1>références</h1>
             </Grid>
@@ -64,12 +56,10 @@ const References = () => {
                 justify="center"
             //alignItems="center" >
             >
-                {references.map(reference => (
-                    <Link href={`/references/${reference.slug}`} >
-                        
+                {refstatic.map(reference => (
+                    <Link href={`/references/${reference.slug}`} key={reference.id}>
                             <Card
                                 classes={{ root: classes.card }}
-                                className={styles.references_card}
                                 key={reference.id}>
                                 <CardActionArea>
                                     <CardMedia
