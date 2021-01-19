@@ -1,0 +1,109 @@
+@import 'styles/color.scss';
+
+.intro {
+    height: 550px;
+    max-height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //text-align: center;
+    //background-image: linear-gradient(300deg, rgba(43, 146, 214, 0.7) 20%, rgba(249, 249, 250, 0.6) 50%), url('../../assets/img/img_intro_1.jpg');
+    background-color: rgb(241, 247, 252); 
+}
+
+.intro_title {
+    font-size: 50px;
+    color: #0d4c80;
+    background-color: white;
+    //text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    padding: 0.3em;
+    ;
+    //padding-top: 2em;
+    font-family: Staatliches;
+    font-weight: bold;
+}
+
+.intro_title:hover {
+    transition: all .25s linear;
+    transform: scale(1.2, 1.2);
+  
+}
+.intro_over {
+    z-index: 1;
+}
+
+.intro_baseline {
+    font-size: 25px;
+    color: $color2;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 0.3em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    background-color: #0d4c80;
+   
+}
+
+.intro_baseline:hover {
+    transition: all .25s linear;
+    transform: scale(1.2, 1.2);
+
+}
+
+.intro_img {
+    transform: rotate(-5deg);
+    border-radius: 2em;
+    max-width: 200px;
+    padding: 0.3em;
+    // padding-left: 0.3em;
+    margin-top: 1em;
+    background-color: rgba(255, 153, 0, 0.199);
+
+}
+
+.intro_content {
+    background-color: #0d4c80;
+    padding: 1em;
+    border-radius: 2em;
+    //color: rgba(0, 0, 0, 0.74)
+
+}
+
+.intro_video {
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    height: 620px;
+    max-height: 620px;
+    z-index: 0;
+}
+
+
+@media (max-width: 499px) {
+    .intro {
+        height: 250px;
+        max-height: 250px;
+    }
+    .intro_title {
+        font-size: 30px;
+    }
+
+.intro_baseline {
+        font-size: 15px;
+    }
+.intro_video {
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    height: 330px;
+    max-height: 330px;
+    z-index: 0;
+}
+    
+
+    }
+    

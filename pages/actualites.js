@@ -26,10 +26,14 @@ const Articles = ({ articles }) => {
                 <Grid item xs={10} md={10}>
                     <h1>Mon actualité</h1>
                     <p className={styles.articles_paragraphe}>Billets d'humeur, nouveau projet, découverte, partage d'expériences ...</p>
-                </Grid >
+                </Grid>
                 <Grid
-                item md={10}
-                //alignItems="center" >
+                item
+                container
+                direction="row"
+                justify="flex-start"
+                alignItems="flex-start"
+                xs={10} md={10}
                 >
                     {articles.slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).map((article, i) => {
                         return (

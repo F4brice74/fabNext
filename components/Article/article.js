@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import ReactHtmlParser from 'react-html-parser';
-import Moment from 'react-moment';
+
 
 
 
 // import material ui
 import Grid from '@material-ui/core/Grid';
 
-import styles from "..Reference/reference.module.scss"
+import styles from "../Reference/reference.module.scss"
 
 
 
@@ -19,7 +19,7 @@ const Article = ({ article }) => {
         <div className={styles.reference_bg}>
             <Grid
 
-direction="column"
+                direction="column"
                 container
                 justify="center"
             alignItems="center"
@@ -37,7 +37,7 @@ direction="column"
                 </Grid>
 
                 <Grid item xs={11} md={7} className={styles.reference_content}>
-                <p className={styles.card_date}><Moment format="DD/MM/YYYY">{article.createdAt}</Moment></p>
+                <p className={styles.card_date}>{article.createdAt}</p>
                 <p className={styles.card_categorie}>
             {article.category.name}
           </p>

@@ -7,7 +7,7 @@ import Reference from "../../components/Reference/reference"
 const Referenceslug = ({ theref }) => {
 
     return (
-        <Reference theref={theref}></Reference>
+        <Reference theref={theref}/>
     );
 }
 

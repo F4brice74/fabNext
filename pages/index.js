@@ -1,7 +1,12 @@
 import Head from 'next/head'
+// import des composants 
 import References from '../components/References/references'
+import Intro from '../components/Intro/intro'
+
+// import des queries
 import REFERENCES_QUERY from "../queries/references/references-query";
 
+// import des librairie
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 
@@ -9,9 +14,10 @@ export default function Home({refstatic}) {
   return (
     <div>
       <Head>
-        <title>Fabrice MIQUET-SAGE - fullstack developper</title>
+        <title>Fabrice MIQUET-SAGE - developper ReactJS - NextJs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Intro />
       <References refstatic={refstatic} />
       
 
