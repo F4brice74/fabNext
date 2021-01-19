@@ -1,0 +1,135 @@
+@import 'styles/color.scss';
+
+.services_bg {
+    //background-image: linear-gradient(to right bottom, #1c5fac81, #12326d, #0a1c4e, #34599e, #000000);
+    // background-image: linear-gradient(175deg, #000000 20%, #ff9900 calc(20% + 2px))
+    //@extend: linear-gradient(to right bottom, #000408, #09162e,  #000000);
+    background-color: #204f75;
+
+    p {
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h4 {
+        text-align: center;
+    }
+}
+
+
+ // *********************INTRO*******************************
+
+.services_intro {
+
+    padding-bottom: 100px;
+    padding-top: 50px;
+
+    p {
+        color: white;
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 1.2em;
+        padding-bottom: 2em;
+        font-family: 'Roboto Condensed', sans-serif;
+
+        span {
+            font-weight: bold
+        }
+    }
+
+
+}
+
+
+ // ********************* BOX *******************************
+
+.services_box {
+   
+    border-radius: 30px;
+    background-color: rgba(241, 247, 252, 0.623);
+    text-align: left; 
+    padding:2em;
+
+    h3 {
+        
+        font-size: 40px;
+    }
+
+    p {
+        color: rgba(0, 0, 0, 0.849);
+        font-size: 1em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+}
+
+.services_box_title {
+    font-size: 1.3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services_box_icon {
+    border-radius: 30px;
+}
+.services_icon {
+    padding: 5px
+}
+
+.services_box_services {
+    padding: 2em;
+    margin-top: -60px;   
+    text-align: center;
+}
+
+
+ // ********************* ITEM *******************************
+
+.services_item {
+    //height: 250px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-image: url('/public/assets/img/services-background.jpg');
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    h4 {
+        text-align: center;
+    }
+
+}
+
+
+
+.services_separator {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    fill: #204f75;
+}
+
+.services_icon2 {
+    margin-bottom : 50px;
+    margin-left: 150px;
+    width: 100px;
+    z-index: 4;
+}
+
+
+@media (max-width: 600px) {
+.services_box_services {
+    padding: 2em;
+    margin-top: 0px;   
+    text-align: center;
+}
+   
+  }

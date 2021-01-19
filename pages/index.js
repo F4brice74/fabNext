@@ -2,6 +2,7 @@ import Head from 'next/head'
 // import des composants 
 import References from '../components/References/references'
 import Intro from '../components/Intro/intro'
+import Services from '../components/Services/services'
 
 // import des queries
 import REFERENCES_QUERY from "../queries/references/references-query";
@@ -18,6 +19,7 @@ export default function Home({refstatic}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Intro />
+      <Services />
       <References refstatic={refstatic} />
       
 
