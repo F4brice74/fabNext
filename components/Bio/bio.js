@@ -60,13 +60,13 @@ const Bio = () => {
                     </p>
                     
                         <Button
-                            classes={{ root: classes.button }}
+                            classes={{root: classes.button, }}
                             variant="contained"
                             href="/actualites">
                             ACTUALITES
                         </Button>
                         <Button
-                            classes={{ root: classes.button }}
+                            classes={{root: classes.button, }}
                             variant="contained"
                             href="/#references"
                         >REFERENCES
