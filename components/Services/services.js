@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from '@iconify/react';
 import reactIcon from '@iconify/icons-logos/react';
-import symfonyIcon from '@iconify/icons-logos/symfony';
 import strapiIcon from '@iconify/icons-logos/strapi';
 import nodejsIcon from '@iconify/icons-logos/nodejs';
 import graphqlIcon from '@iconify/icons-logos/graphql';
@@ -19,7 +18,7 @@ import auth0Icon from '@iconify/icons-logos/auth0';
 
 
 // import animation
-//import ScrollAnimation from 'react-animate-on-scroll';
+
 
 // import material ui
 import Grid from '@material-ui/core/Grid';
