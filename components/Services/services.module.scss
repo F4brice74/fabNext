@@ -67,7 +67,7 @@
 }
 
 .services_box_title {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
@@ -76,9 +76,14 @@
 
 .services_box_icon {
     border-radius: 30px;
+    padding-top: 30px;
 }
 .services_icon {
     padding: 5px
+}
+.services_icon_services {
+    width: 30px;
+   
 }
 
 .services_box_services {

@@ -15,6 +15,7 @@ import bootstrapIcon from '@iconify/icons-logos/bootstrap';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import nextjsIcon from '@iconify/icons-logos/nextjs';
 import auth0Icon from '@iconify/icons-logos/auth0';
+import SettingsRoundedIcon from '@material-ui/icons/SettingsRounded';;
 
 
 // import animation
@@ -53,8 +54,6 @@ const Services = () => {
             className={styles.services_bg}
         >
             <Grid item xs={11} md={6} className={styles.services_intro}>
-
-                <h1>CRÉATION DE SITES WEB</h1>
                 <h4>Site vitrine, portfolio, corporate, événementiel, e-commerce</h4>
                 <p><ArrowRightIcon />Vous souhaitez mettre en valeur votre activité, vos services ? <br />
                     <ArrowRightIcon />Vous souhaitez communiquer sur votre marque, sur votre événement ? <br />
@@ -86,7 +85,8 @@ const Services = () => {
                 <Grid item xs={10} md={6} lg={2}>
 
                     <Card classes={{ root: classes.card }} className={styles.services_box_services} >
-                        <p className={styles.services_box_title}>DEVELOPPEMENT WEB BACK<br /></p>
+                        
+                        <p className={styles.services_box_title}>DEVELOPPEMENT BACKEND<br /></p>
                         <p>Bases de données</p>
                         <p>Architecture technique</p>
                         <p>Fonctionnalités</p>
@@ -98,7 +98,8 @@ const Services = () => {
                 <Grid item xs={10} md={6} lg={2} >
 
                     <Card classes={{ root: classes.card }} className={styles.services_box_services} >
-                        <p className={styles.services_box_title}>DEVELOPPEMENT WEB FRONT<br /> </p>
+
+                        <p className={styles.services_box_title}>DEVELOPPEMENT FRONTEND<br /> </p>
                         <p>Interface utilisateur</p>
                         <p>Responsive design</p>
                         <p>Integration contenus</p>
@@ -130,8 +131,8 @@ const Services = () => {
                         xs={10} md={10}>
 
                         <h3>ma galaxie</h3>
-                        <p>Je construis mes applications autour de librairies Javascript. Formé et spécialisé sur ReactJS Je développe mes interfaces utilisateurs avec Next JS et je m'appuie sur des CMS Headless JS pour la partie backend.<br /><br /> Construites en mode API Rest ou GraphQL, ces solutions m'offrent <strong>ergonomie, rapidité, scalabilité</strong>.<br /><br />
-                        Elles correspondent aux nouvelles attentes des utilisateurs et aux standards du web.
+                        <p>Je construis mes applications autour de librairies Javascript. Formé et spécialisé sur ReactJS, je développe mes interfaces utilisateurs avec Next JS et je m'appuie sur des CMS Headless JS pour la partie backend.<br /><br /> Construites en mode API Rest ou GraphQL, ces solutions m'offrent <strong>ergonomie, rapidité, scalabilité</strong>.<br /><br />
+                        Elles correspondent aux nouvelles attentes et aux nouveaux usages des utilisateurs et aux plus récents standards du web.
                             </p>
 
                     </Grid>
