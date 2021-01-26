@@ -56,7 +56,7 @@ const Bio = () => {
                 alignItems="center">
                 <Grid item xs={12} md={12}>                
                     <img src="/assets/img/img_fab.jpg" className={styles.bio_img2} alt="fabrice"/>
-                    <p className={styles.bio_testimonial}> "Audiovisuel, événementiel, communication, digital, j'ai exploré depuis une quinzaine d'années différents terrains de jeux, tous aussi passionnants les uns que les autres. Chaque expérience, chaque projet réalisé, chaque collaboration, chaque rencontre contribue à m'enrichir, à nourrir mon savoir-faire et mon expertise. Je m’épanouis dans la conduite de projets, la recherche et la mise en œuvre de solutions, le suivi et la relation clients. Ce parcours atypique me mène aujourd'hui à proposer mes services dans la conception de sites et d'applications webs. " <br></br>
+                    <p className={styles.bio_testimonial}> "Web, audiovisuel, événementiel, communication, digital, j'explore depuis une quinzaine d'années différents terrains de jeux, tous aussi passionnants les uns que les autres.<br/> Chaque expérience, chaque projet réalisé, chaque collaboration, chaque rencontre contribue à m'enrichir, à nourrir mon savoir-faire et mon expertise.<br/> Je m’épanouis dans la conduite de projets, la recherche et la mise en œuvre de solutions, le suivi et la relation clients.<br/> Ce parcours atypique me mène aujourd'hui à proposer mes services dans la conception de sites et d'applications webs. " <br></br>
                     </p>
                     
                         <Button
@@ -174,8 +174,8 @@ const Bio = () => {
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent>
-                            <p className={styles.bio_title}>CONTENT & WEB SOLUTIONS</p>
-                            <p className={styles.bio_paragraphe}>Freelance, développement web et gestion de projets</p>
+                            <p className={styles.bio_title}>FREELANCE</p>
+                            <p className={styles.bio_paragraphe}>développement web et gestion de projets audiovisuels et événementiel</p>
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>

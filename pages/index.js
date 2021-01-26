@@ -5,6 +5,10 @@ import Intro from '../components/Intro/intro'
 import Bio from '../components/Bio/bio'
 import Services from '../components/Services/services'
 
+//import motion 
+import { motion } from "framer-motion";
+
+
 // import des queries
 import REFERENCES_QUERY from "../queries/references/references-query";
 
@@ -22,8 +26,7 @@ export default function Home({refstatic}) {
       <Intro />
       <Bio />
       <Services />
-      <References refstatic={refstatic} />
-      
+      <References refstatic={refstatic} />    
 
      </div>
   )

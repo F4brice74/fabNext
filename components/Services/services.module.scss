@@ -25,7 +25,7 @@
 .services_intro {
 
     padding-bottom: 100px;
-    padding-top: 50px;
+    padding-top: 100px;
 
     p {
         color: white;
@@ -34,10 +34,11 @@
         font-size: 1.2em;
         padding-bottom: 2em;
         font-family: 'Roboto Condensed', sans-serif;
-
-        span {
-            font-weight: bold
-        }
+        line-height: 30px;       
+    }
+    h4 {
+        padding-bottom: 2em;
+        text-transform: uppercase;
     }
 
 
@@ -72,11 +73,16 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 .services_box_icon {
-    border-radius: 30px;
-    padding-top: 30px;
+    margin-top: -90px;
+    text-align: center;
+    img {
+        width:40%;
+        margin-bottom: 0px;
+    }
 }
 .services_icon {
     padding: 5px
@@ -88,9 +94,23 @@
 
 .services_box_services {
     padding: 2em;
-    margin-top: -60px;   
+    margin-top: -80px;   
     text-align: center;
 }
+
+.mark {
+    margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      #204f7525,
+      #00ccffa2 50%,
+      #204f75,);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 
 
  // ********************* ITEM *******************************

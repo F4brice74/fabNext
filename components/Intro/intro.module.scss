@@ -23,11 +23,11 @@
     font-weight: bold;
 }
 
-.intro_title:hover {
-    transition: all .25s linear;
-    transform: scale(1.2, 1.2);
+// .intro_title:hover {
+//     transition: all .25s linear;
+//     transform: scale(1.2, 1.2);
   
-}
+// }
 .intro_over {
     z-index: 1;
 }
@@ -44,11 +44,10 @@
    
 }
 
-.intro_baseline:hover {
-    transition: all .25s linear;
-    transform: scale(1.2, 1.2);
-
-}
+// .intro_baseline:hover {
+//     transition: all .25s linear;
+//     transform: scale(1.2, 1.2);
+// }
 
 .intro_img {
     transform: rotate(-5deg);

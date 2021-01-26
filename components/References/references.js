@@ -15,8 +15,28 @@ import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 
+//import animations
+import { useSpring, animated } from 'react-spring'
+
+
 //import locaux
 import styles from "./references.module.scss"
+
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+    const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+
+const AnimCard = ({ cardtoanimate }) => {
+    const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 2, tension: 300, friction: 10 } }))
+    return (
+       <animated.div
+       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+       onMouseLeave={() => set({ xys: [0, 0, 1] })}
+       style={{ transform: props.xys.interpolate(trans) }}>
+            {cardtoanimate}
+       </animated.div>
+    )
+
+};
 
 const useStyles = makeStyles({
     card: {
@@ -51,13 +71,14 @@ const References = ({refstatic} ) => {
                 <h1>références</h1>
             </Grid>
             <Grid
-                container item xs={10} md={10}
+                container item xs={10} md={8}
                 direction="row"
-                justify="center"
+                
             //alignItems="center" >
             >
                 {refstatic.map(reference => (
                     <Link href={`/references/${reference.slug}`} key={reference.id}>
+                    <AnimCard cardtoanimate={
                             <Card
                                 classes={{ root: classes.card }}
                                 key={reference.id}>
@@ -74,7 +95,7 @@ const References = ({refstatic} ) => {
                                         <p className={styles.references_card_p}>{reference.excerpt}</p>
                                     </CardContent>
                                 </CardActionArea>
-                            </Card>
+                            </Card>}/>
                     </Link>
 
                 ))

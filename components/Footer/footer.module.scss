@@ -2,3 +2,29 @@
 .footer {
     background-color: #0d4c80;
 }
+
+.contact_paragraphe {
+    color: white;
+    font-size: 16px;
+
+}
+.contact_bg {
+    background-color: rgb(21, 43, 65);
+    padding-bottom: 150px;
+    
+    h3 {
+
+        padding-bottom: 50px;
+    }
+    li {
+        list-style-type:none;
+        color: white;
+    }
+    a {
+        color: white;
+    } 
+}
+.contact_border {
+    border-left: 2px solid white;
+    padding: 10px;
+}
