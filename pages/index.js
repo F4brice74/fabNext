@@ -6,7 +6,7 @@ import Bio from '../components/Bio/bio'
 import Services from '../components/Services/services'
 
 //import motion 
-import { motion } from "framer-motion";
+
 
 
 // import des queries

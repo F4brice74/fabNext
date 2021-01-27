@@ -2,17 +2,14 @@ import '../styles/globals.scss'
 import Layout from '../components/layout'
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/apolloClient'
-import { AnimateSharedLayout } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const apolloClient = useApollo(pageProps)
 
   return (
     <ApolloProvider client={apolloClient}>
       <Layout>
-        <AnimateSharedLayout>
-          <Component {...pageProps} />
-        </AnimateSharedLayout>
+        <Component {...pageProps} />
       </Layout>
     </ApolloProvider>
 

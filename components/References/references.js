@@ -23,17 +23,17 @@ import { useSpring, animated } from 'react-spring'
 import styles from "./references.module.scss"
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-    const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 const AnimCard = ({ cardtoanimate }) => {
     const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 2, tension: 300, friction: 10 } }))
     return (
-       <animated.div
-       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-       onMouseLeave={() => set({ xys: [0, 0, 1] })}
-       style={{ transform: props.xys.interpolate(trans) }}>
+        <animated.div
+            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+            onMouseLeave={() => set({ xys: [0, 0, 1] })}
+            style={{ transform: props.xys.interpolate(trans) }}>
             {cardtoanimate}
-       </animated.div>
+        </animated.div>
     )
 
 };
@@ -53,11 +53,11 @@ const useStyles = makeStyles({
 
 
 
-const References = ({refstatic} ) => {
+const References = ({ refstatic }) => {
     const classes = useStyles();
-    
+
     return (
-        
+
 
         <Grid
             container
@@ -66,19 +66,20 @@ const References = ({refstatic} ) => {
             justify="center"
             className={styles.references_bg}
         >
-        
+
             <Grid item xs={10} md={8}>
                 <h1>références</h1>
             </Grid>
             <Grid
                 container item xs={10} md={8}
                 direction="row"
-                
+
             //alignItems="center" >
             >
                 {refstatic.map(reference => (
-                    <Link href={`/references/${reference.slug}`} key={reference.id}>
                     <AnimCard cardtoanimate={
+                        <Link href={`/references/${reference.slug}`} key={reference.id}>
+
                             <Card
                                 classes={{ root: classes.card }}
                                 key={reference.id}>
@@ -95,8 +96,8 @@ const References = ({refstatic} ) => {
                                         <p className={styles.references_card_p}>{reference.excerpt}</p>
                                     </CardContent>
                                 </CardActionArea>
-                            </Card>}/>
-                    </Link>
+                            </Card>
+                        </Link>} />
 
                 ))
                 }

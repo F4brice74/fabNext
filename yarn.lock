@@ -1909,10 +1909,10 @@ framer-motion@^3.2.2-rc.1:
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
 
-framer@^1.2.15:
-  version "1.2.15"
-  resolved "https://registry.yarnpkg.com/framer/-/framer-1.2.15.tgz#65a23a0a1561d9a2d2b0f6868d5932a386bbc28b"
-  integrity sha512-MnyNWeifCbYYmDLV1uU1WPC2CWB8ZB0w9rWzoLFK+0X4IGnxozdrB4B6zzOks+hQXJrG2cCUmvqTmvNRLvFaCA==
+framer@^1.2.16:
+  version "1.2.16"
+  resolved "https://registry.yarnpkg.com/framer/-/framer-1.2.16.tgz#164695b0379b076f8bdd94e8d06b852ba70f075e"
+  integrity sha512-8K798sMCDpqc2AOvacXK4ejPtiVbZqdU151W0sDlxAjR3fO/6bFXjzLeWWaSb+2RE4X1hTgIMQA7ljAKmHu91A==
 
 framesync@5.0.0, framesync@^5.0.0:
   version "5.0.0"
