@@ -10,6 +10,8 @@ import styles from './intro.module.scss'
 // import animation 
 import { motion, AnimatePresence } from "framer-motion"
 
+
+
 const Intro = () => {
 
     return (

@@ -8,6 +8,7 @@ import Article from '../../components/Article/article'
 const Actualite = ({ article }) => {
 
     return (
+
         <Article article={article}/>
     );
 };
@@ -30,13 +31,13 @@ export async function getStaticPaths() {
     if (loading) return <div className="circularProgress"><CircularProgress size={200} /></div>
     if (error) return <p>Error: {JSON.stringify(error)}</p>;
     const articlestatic = data.articles;
-  console.log("articlestatic from slug", articlestatic)
+  //console.log("articlestatic from slug", articlestatic)
   
   const paths = articlestatic.map((articleOne) => ({
     params: { slug: articleOne.slug },
   }))
   
- console.log("paths", paths)
+ //console.log("paths", paths)
     
     return {
         paths,
@@ -63,7 +64,7 @@ export const getStaticProps = async ({ params }) => {
     if (loading) return <div className="circularProgress"><CircularProgress size={200} /></div>
     if (error) return <p>Error: {JSON.stringify(error)}</p>;
     const article = data.articles[0];
-    console.log("article from slug", article)
+    //console.log("article from slug", article)
   
     return {
         props: { article } 

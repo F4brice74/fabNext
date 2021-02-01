@@ -22,7 +22,9 @@ export default function Home({refstatic}) {
       <Head>
         <title>Fabrice MIQUET-SAGE - developper ReactJS - NextJs</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <meta property="og:title" content="Fabrice MIQUET-SAGE - developper ReactJS - NextJs" key="title" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />        
+            </Head>
       <Intro />
       <Bio />
       <Services />

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ReactHtmlParser from 'react-html-parser';
+import Head from 'next/head';
 
 // import material ui
 import Grid from '@material-ui/core/Grid';
@@ -11,6 +12,12 @@ import styles from "./reference.module.scss"
 const Reference = ({ theref }) => {
   
     return (
+        <div>        
+        <Head>
+        <title>PROJET : {theref.title}</title>
+        <meta property="og:title" content={theref.title} key="title" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+      </Head>
         <Grid
             container
             direction="row"
@@ -53,6 +60,7 @@ const Reference = ({ theref }) => {
 
 
         </Grid>
+        </div>
     );
 }
 

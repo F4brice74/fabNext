@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link'
+import Moment from 'react-moment';
 
 // import material ui
 import Grid from '@material-ui/core/Grid';
@@ -25,7 +26,7 @@ const Card = ({ article }) => {
           <p className={styles.card_categorie}>
             {article.category.name}
           </p>
-          <p className={styles.card_date}>{article.createdAt}</p>
+          <p className={styles.card_date}><Moment format="DD/MM/YYYY">{article.createdAt}</Moment></p>
           <img
             src={imageUrl}
             alt={article.image.url}

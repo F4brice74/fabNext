@@ -18,8 +18,10 @@ import EventIcon from '@material-ui/icons/Event';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 
 //import local
-
 import styles from "./bio.module.scss"
+
+// import animation
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const useStyles = makeStyles({
     button: {
@@ -54,10 +56,22 @@ const Bio = () => {
                 xs={10} md={4}
                 justify="space-around"
                 alignItems="center">
-                <Grid item xs={12} md={12}>                
+                <Grid item xs={12} md={12}>   
+                <ScrollAnimation                    
+                    duration={0.5}
+                    animateIn="fadeIn"
+                >             
                     <img src="/assets/img/img_fab.jpg" className={styles.bio_img2} alt="fabrice"/>
+                    </ScrollAnimation>
+                    <ScrollAnimation
+                    delay={100}
+                    duration={0.5}
+                    animateIn="fadeIn"
+                >
                     <p className={styles.bio_testimonial}> "Web, audiovisuel, événementiel, communication, digital, j'explore depuis une quinzaine d'années différents terrains de jeux, tous aussi passionnants les uns que les autres.<br/> Chaque expérience, chaque projet réalisé, chaque collaboration, chaque rencontre contribue à m'enrichir, à nourrir mon savoir-faire et mon expertise.<br/> Je m’épanouis dans la conduite de projets, la recherche et la mise en œuvre de solutions, le suivi et la relation clients.<br/> Ce parcours atypique me mène aujourd'hui à proposer mes services dans la conception de sites et d'applications webs. " <br></br>
+                    
                     </p>
+                    </ScrollAnimation>
                     
                         <Button
                             classes={{root: classes.button, }}

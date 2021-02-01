@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import styles from "./actualites.module.scss"
 
 const Articles = ({ articles }) => {
-    console.log("articles from actualites", articles)
+   // console.log("articles from actualites", articles)
     return (
 
         <div

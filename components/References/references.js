@@ -1,5 +1,6 @@
 import React from "react";
-import Link from 'next/link'
+import Link from 'next/link';
+import Head from 'next/head';
 
 import REFERENCES_QUERY from "../../queries/references/references-query";
 import { useQuery } from "@apollo/client";
@@ -57,8 +58,7 @@ const References = ({ refstatic }) => {
     const classes = useStyles();
 
     return (
-
-
+       
         <Grid
             container
             id="references"
@@ -109,6 +109,7 @@ const References = ({ refstatic }) => {
             </Grid>
 
         </Grid >
+       
     );
 }
 

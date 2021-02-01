@@ -1,0 +1,25 @@
+# Next-on-Netlify Redirects
+/  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/actualites.json  /.netlify/functions/next_actualites  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/actualites/Headless-Commerce-Summit.json  /.netlify/functions/next_actualites_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/actualites/Oups-I-did-it-again.json  /.netlify/functions/next_actualites_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/actualites/un-parcours-non-lineaire-....json  /.netlify/functions/next_actualites_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/index.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/references/Association-de-parents-d'eleves.json  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/references/BETER-CACHAT.json  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/references/OBARXO.json  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/references/ONOIRE-Brasserie-artisanale.json  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/references/PORTFOLIO-DEVELOPPEUR.json  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/Twv6xB3awjQw_buhm840M/references/RESTAURANT-L'HELIANTIS.json  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/actualites  /.netlify/functions/next_actualites  200!  Cookie=__prerender_bypass,__next_preview_data
+/actualites/Headless-Commerce-Summit  /.netlify/functions/next_actualites_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/actualites/Oups-I-did-it-again  /.netlify/functions/next_actualites_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/actualites/un-parcours-non-lineaire-...  /.netlify/functions/next_actualites_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/api/hello  /.netlify/functions/next_api_hello  200
+/references/Association-de-parents-d'eleves  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/references/BETER-CACHAT  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/references/OBARXO  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/references/ONOIRE-Brasserie-artisanale  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/references/PORTFOLIO-DEVELOPPEUR  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/references/RESTAURANT-L'HELIANTIS  /.netlify/functions/next_references_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/image*  url=:url w=:width q=:quality  /.netlify/functions/next_image?url=:url&w=:width&q=:quality  200
