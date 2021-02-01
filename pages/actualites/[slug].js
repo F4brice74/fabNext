@@ -45,6 +45,7 @@ export async function getStaticPaths() {
     }
 }
 
+
 export const getStaticProps = async ({ params }) => {
 
     const client = new ApolloClient({
@@ -57,6 +58,7 @@ export const getStaticProps = async ({ params }) => {
         cache: new InMemoryCache(),
     });
     const { slug } = params;
+
     const { data, error, loading } = await client.query({
         query: ARTICLE_QUERY,
         variables: { slug: slug }
