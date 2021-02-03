@@ -12,7 +12,7 @@ import styles from "./reference.module.scss"
 const Reference = ({ theref }) => {
   
     return (
-        <div>        
+        <div >        
         <Head>
         <title>PROJET : {theref.title}</title>
         <meta property="og:title" content={theref.title} key="title" />

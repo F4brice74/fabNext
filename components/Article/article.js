@@ -26,7 +26,6 @@ const Article = ({ article }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
             <Grid
-
                 direction="column"
                 container
                 justify="center"

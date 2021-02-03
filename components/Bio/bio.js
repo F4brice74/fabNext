@@ -25,8 +25,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const useStyles = makeStyles({
     button: {
-        marginTop: '2em',
-        marginLeft: '3em',
+        marginTop: '10px',
+        //marginLeft: '3em',
         background: 'linear-gradient(45deg, #204f75 30%, #4f81aa 90%)',
         color: 'white',
         '&:hover': {
@@ -54,46 +54,57 @@ const Bio = () => {
                 item
                 container
                 xs={10} md={4}
-                justify="space-around"
-                alignItems="center">
-                <Grid item xs={12} md={12}>   
-                <ScrollAnimation                    
-                    duration={0.5}
-                    animateIn="fadeIn"
-                >             
-                    <img src="/assets/img/img_fab.jpg" className={styles.bio_img2} alt="fabrice"/>
+                justify="space-between"
+                alignItems="center"
+
+            >
+                <Grid item xs={12} md={12}>
+                    <ScrollAnimation
+                        duration={0.5}
+                        animateIn="fadeIn"
+                    >
+                        <img src="/assets/img/img_fab.jpg" className={styles.bio_img2} alt="fabrice" />
                     </ScrollAnimation>
                     <ScrollAnimation
-                    delay={100}
-                    duration={0.5}
-                    animateIn="fadeIn"
-                >
-                    <p className={styles.bio_testimonial}> "Web, audiovisuel, événementiel, communication, digital, j'explore depuis une quinzaine d'années différents terrains de jeux, tous aussi passionnants les uns que les autres.<br/> Chaque expérience, chaque projet réalisé, chaque collaboration, chaque rencontre contribue à m'enrichir, à nourrir mon savoir-faire et mon expertise.<br/> Je m’épanouis dans la conduite de projets, la recherche et la mise en œuvre de solutions, le suivi et la relation clients.<br/> Ce parcours atypique me mène aujourd'hui à proposer mes services dans la conception de sites et d'applications webs. " <br></br>
-                    
-                    </p>
+                        delay={100}
+                        duration={0.5}
+                        animateIn="fadeIn"
+                    >
+                        <p className={styles.bio_testimonial}> "Web, audiovisuel, événementiel, communication, digital, j'explore depuis une quinzaine d'années différents terrains de jeux, tous aussi passionnants les uns que les autres.<br /> Chaque expérience, chaque projet réalisé, chaque collaboration, chaque rencontre contribue à m'enrichir, à nourrir mon savoir-faire et mon expertise.<br /> Je m’épanouis dans la conduite de projets, la recherche et la mise en œuvre de solutions, le suivi et la relation clients.<br /> Ce parcours atypique me mène aujourd'hui à proposer mes services dans la conception de sites et d'applications webs. " <br></br>
+
+                        </p>
                     </ScrollAnimation>
-                    
+
+                </Grid>
+                <Grid item container direction="row" xs={12} md={8} justify="center">
+                    <Grid item xs={5}>
                         <Button
-                            classes={{root: classes.button, }}
+                            classes={{ root: classes.button, }}
                             variant="contained"
                             href="/actualites">
                             ACTUALITES
                         </Button>
+                    </Grid>
+                    <Grid item xs={5}>
                         <Button
-                            classes={{root: classes.button, }}
+                            classes={{ root: classes.button, }}
                             variant="contained"
                             href="/#references"
                         >REFERENCES
                         </Button>
-                   
+                    </Grid>
                 </Grid>
-               
+
+
+
+
             </Grid>
             <Grid item container xs={12} md={5}
                 direction="row"
                 justify="center"
                 alignItems="center"
                 className={styles.timeline}>
+                <h3 className={styles.bio_parcours}>mon parcours</h3> 
                 <Timeline align="alternate">
                     <TimelineItem>
                         <TimelineOppositeContent>
