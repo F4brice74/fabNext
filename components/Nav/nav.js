@@ -50,7 +50,7 @@ const Nav = () => {
         </Button>
         <Drawer classes={{ paper: classes.paper }} open={drawerOpen} onClose={toggleDrawerButton}>
           <MenuItem onClick={toggleDrawerButton}><Link href="/"><p className={styles.list}>Accueil</p></Link></MenuItem>
-          <MenuItem onClick={toggleDrawerButton}><Link href="/#services"><p className={styles.list}>Service</p></Link></MenuItem>
+          <MenuItem onClick={toggleDrawerButton}><Link href="/#services"><p className={styles.list}>Services</p></Link></MenuItem>
           <MenuItem onClick={toggleDrawerButton}><Link href="/#references"><p className={styles.list}>References</p></Link></MenuItem>
           <MenuItem onClick={toggleDrawerButton}><Link href="/actualites"><p className={styles.list}>Actualites</p></Link></MenuItem>
           <MenuItem onClick={toggleDrawerButton}><Link href="/#contact"><p className={styles.list}>Contact</p></Link></MenuItem>
