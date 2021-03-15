@@ -49,11 +49,11 @@ const Nav = () => {
           <MenuIcon fontSize="large" color="inherit" className={styles.icon} />
         </Button>
         <Drawer classes={{ paper: classes.paper }} open={drawerOpen} onClose={toggleDrawerButton}>
-          <MenuItem onClick={toggleDrawerButton}><Link href="/"><p data-cy="nav_item_Accueil" className={styles.list}>Accueil</p></Link></MenuItem>
-          <MenuItem onClick={toggleDrawerButton}><Link href="/#services"><p data-cy="nav_item_Services" className={styles.list}>Services</p></Link></MenuItem>
-          <MenuItem onClick={toggleDrawerButton}><Link href="/#references"><p data-cy="nav_item_References" className={styles.list}>References</p></Link></MenuItem>
-          <MenuItem onClick={toggleDrawerButton}><Link href="/actualites"><p data-cy="nav_item_Actualites" className={styles.list}>Actualites</p></Link></MenuItem>
-          <MenuItem onClick={toggleDrawerButton}><Link href="/#contact"><p data-cy="nav_item_Contact" className={styles.list}>Contact</p></Link></MenuItem>
+          <MenuItem onClick={toggleDrawerButton}><Link href="/"><p className={styles.list}>Accueil</p></Link></MenuItem>
+          <MenuItem onClick={toggleDrawerButton}><Link href="/#services"><p className={styles.list}>Services</p></Link></MenuItem>
+          <MenuItem onClick={toggleDrawerButton}><Link href="/#references"><p className={styles.list}>References</p></Link></MenuItem>
+          <MenuItem onClick={toggleDrawerButton}><Link href="/actualites"><p className={styles.list}>Actualites</p></Link></MenuItem>
+          <MenuItem onClick={toggleDrawerButton}><Link href="/#contact"><p className={styles.list}>Contact</p></Link></MenuItem>
         </Drawer>
       </div>
 
