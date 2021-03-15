@@ -60,9 +60,7 @@ export const getStaticProps = async ({ params }) => {
         fetchOptions: {
             mode: 'no-cors',
         },
-        // headers: {
-        //   authorization: token ? `Bearer ${token}` : "",
-        // },
+        
         cache: new InMemoryCache(),
     });
 

@@ -5,16 +5,11 @@ import Intro from '../components/Intro/intro'
 import Bio from '../components/Bio/bio'
 import Services from '../components/Services/services'
 
-//import motion 
-
-
-
 // import des queries
 import REFERENCES_QUERY from "../queries/references/references-query";
 
 // import des librairie
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-
 
 export default function Home({refstatic}) {
   return (
@@ -24,13 +19,12 @@ export default function Home({refstatic}) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Fabrice MIQUET-SAGE - developper ReactJS - NextJs" key="title" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />        
-            </Head>
+      </Head>
       <Intro />
       <Bio />
       <Services />
       <References refstatic={refstatic} />    
-
-     </div>
+    </div>
   )
 }
 
@@ -42,9 +36,6 @@ export const getStaticProps = async ({ params }) => {
     fetchOptions: {
       mode: 'no-cors',
     },
-    // headers: {
-    //   authorization: token ? `Bearer ${token}` : "",
-    // },
     cache: new InMemoryCache(),    
   });
 

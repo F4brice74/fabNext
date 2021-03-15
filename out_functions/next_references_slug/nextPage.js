@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "redi");
+/******/ 	return __webpack_require__(__webpack_require__.s = "guR4");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -7084,12 +7084,19 @@ var head_default = /*#__PURE__*/__webpack_require__.n(head);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__("q1tI");
 
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
+var makeStyles = __webpack_require__("R/WZ");
+
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
 var core = __webpack_require__("m178");
 
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__("YFqc");
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/icons/Menu.js
+var Menu = __webpack_require__("uniG");
+var Menu_default = /*#__PURE__*/__webpack_require__.n(Menu);
 
 // EXTERNAL MODULE: ./components/Nav/nav.module.scss
 var nav_module = __webpack_require__("zZPB");
@@ -7098,13 +7105,23 @@ var nav_module_default = /*#__PURE__*/__webpack_require__.n(nav_module);
 // CONCATENATED MODULE: ./components/Nav/nav.js
 
 
+ // import Material UI
+
+
 
 
  // import local
 
 
+const useStyles = Object(makeStyles["a" /* default */])({
+  paper: {
+    background: '#204F75',
+    width: '250px'
+  }
+});
 
 const Nav = () => {
+  const classes = useStyles();
   const {
     0: drawerOpen,
     1: setdrawerOpen
@@ -7118,96 +7135,87 @@ const Nav = () => {
     setdrawerOpen(!drawerOpen);
   };
 
-  return /*#__PURE__*/Object(jsx_runtime["jsxs"])(core["Grid"], {
-    item: true,
-    xs: 12,
-    container: true,
-    justify: "flex-start",
-    children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])(core["Toolbar"], {
-      className: nav_module_default.a.desktopAppbar,
-      children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-        href: "/#home",
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-          className: `${nav_module_default.a.btn} ${nav_module_default.a.from_center}`,
-          children: "Hello"
+  return /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+    className: nav_module_default.a.mobileAppbar,
+    children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(core["Button"], {
+      onClick: toggleDrawerButton,
+      children: /*#__PURE__*/Object(jsx_runtime["jsx"])(Menu_default.a, {
+        fontSize: "large",
+        color: "inherit",
+        className: nav_module_default.a.icon
+      })
+    }), /*#__PURE__*/Object(jsx_runtime["jsxs"])(core["Drawer"], {
+      classes: {
+        paper: classes.paper
+      },
+      open: drawerOpen,
+      onClose: toggleDrawerButton,
+      children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
+        onClick: toggleDrawerButton,
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
+          href: "/",
+          children: /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+            className: nav_module_default.a.list,
+            children: "Accueil"
+          })
         })
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-        href: "/#services",
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-          className: `${nav_module_default.a.btn} ${nav_module_default.a.from_center}`,
-          children: "Services"
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
+        onClick: toggleDrawerButton,
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
+          href: "/#services",
+          children: /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+            className: nav_module_default.a.list,
+            children: "Service"
+          })
         })
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-        href: "/#references",
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-          className: `${nav_module_default.a.btn} ${nav_module_default.a.from_center}`,
-          children: "References"
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
+        onClick: toggleDrawerButton,
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
+          href: "/#references",
+          children: /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+            className: nav_module_default.a.list,
+            children: "References"
+          })
         })
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-        href: "/actualites",
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-          className: `${nav_module_default.a.btn} ${nav_module_default.a.from_center}`,
-          children: "Actualites"
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
+        onClick: toggleDrawerButton,
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
+          href: "/actualites",
+          children: /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+            className: nav_module_default.a.list,
+            children: "Actualites"
+          })
         })
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-        href: "/#contact",
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-          className: `${nav_module_default.a.btn} ${nav_module_default.a.from_center}`,
-          children: "contact"
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
+        onClick: toggleDrawerButton,
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
+          href: "/#contact",
+          children: /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+            className: nav_module_default.a.list,
+            children: "Contact"
+          })
         })
       })]
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["AppBar"], {
-      className: nav_module_default.a.mobileAppbar,
-      position: "fixed",
-      color: "inherit",
-      children: /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(core["Button"], {
-          onClick: toggleDrawerButton,
-          children: "Menu"
-        }), /*#__PURE__*/Object(jsx_runtime["jsxs"])(core["Drawer"], {
-          className: nav_module_default.a.mobileAppbar,
-          open: drawerOpen,
-          onClose: toggleDrawerButton,
-          children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
-            onClick: toggleDrawerButton,
-            children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-              className: nav_module_default.a.list,
-              href: "/",
-              children: "Accueil"
-            })
-          }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
-            onClick: toggleDrawerButton,
-            children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-              className: nav_module_default.a.list,
-              href: "/#services",
-              children: "Services"
-            })
-          }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
-            onClick: toggleDrawerButton,
-            children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-              className: nav_module_default.a.list,
-              href: "/#references",
-              children: "References"
-            })
-          }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
-            onClick: toggleDrawerButton,
-            children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-              className: nav_module_default.a.list,
-              href: "/actualites",
-              children: "Actualites"
-            })
-          }), /*#__PURE__*/Object(jsx_runtime["jsx"])(core["MenuItem"], {
-            onClick: toggleDrawerButton,
-            children: /*#__PURE__*/Object(jsx_runtime["jsx"])(link_default.a, {
-              className: nav_module_default.a.list,
-              href: "/#contact",
-              children: "Contact"
-            })
-          })]
-        })]
-      })
     })]
-  });
+  }) // {/* <AppBar
+  //   className={styles.mobileAppbar}
+  //   position="fixed"
+  //   color="inherit"
+  // >
+  //   <div >
+  //   <Button onClick={toggleDrawerButton} >
+  //     <MenuIcon />
+  //   </Button>
+  //     <Drawer className={styles.mobileAppbar} open={drawerOpen} onClose={toggleDrawerButton}>
+  //       <MenuItem onClick={toggleDrawerButton}><Link className={styles.list} href="/">Accueil</Link></MenuItem>
+  //       <MenuItem onClick={toggleDrawerButton}><Link className={styles.list} href="/#services">Services</Link></MenuItem>
+  //       <MenuItem onClick={toggleDrawerButton}><Link className={styles.list} href="/#references">References</Link></MenuItem>
+  //       <MenuItem onClick={toggleDrawerButton}><Link className={styles.list} href="/actualites">Actualites</Link></MenuItem>
+  //       <MenuItem onClick={toggleDrawerButton}><Link className={styles.list} href="/#contact">Contact</Link></MenuItem>
+  //     </Drawer>
+  //   </div>
+  // </AppBar> */}
+  ;
 };
 
 /* harmony default export */ var nav = (Nav);
@@ -16497,6 +16505,26 @@ Object.keys(_withTheme).forEach(function (key) {
 
 /* Warning if there are several instances of @material-ui/styles */
 if (false) {}
+
+/***/ }),
+
+/***/ "8/g6":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _utils.createSvgIcon;
+  }
+});
+
+var _utils = __webpack_require__("kNCj");
 
 /***/ }),
 
@@ -33963,7 +33991,7 @@ exports.versionInfo = versionInfo;
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-3cb8f7ab5d3930a1a759.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/_bNK9y4GIG4YdE3ui_5ft/_buildManifest.js\",\"static/_bNK9y4GIG4YdE3ui_5ft/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/05d954cf.2ae3e6726cd92a9c3e83.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/3a98b9509c19a87958fdbd43eb4e76ce2188c4a8.21ed74d1cd4bb4fa5a37.js\",\"static/chunks/71247caf95475e3ea7f9a0f8a30beb258b23d005.3b9bd7ce05c40bc72fbe.js\",\"static/css/cca4f7276ff5dfdc08eb.css\",\"static/chunks/pages/index-a92ebcc079f8e80ad5b4.js\"],\"/_app\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/3a98b9509c19a87958fdbd43eb4e76ce2188c4a8.21ed74d1cd4bb4fa5a37.js\",\"static/chunks/71247caf95475e3ea7f9a0f8a30beb258b23d005.3b9bd7ce05c40bc72fbe.js\",\"static/css/37348be9605ed8ba257d.css\",\"static/chunks/pages/_app-9645a6291c91a7d1b36c.js\"],\"/_error\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/pages/_error-ce534fd966ee61bb6f13.js\"],\"/actualites\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/75fc9c18.d332859c3b984f80e31e.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/3a98b9509c19a87958fdbd43eb4e76ce2188c4a8.21ed74d1cd4bb4fa5a37.js\",\"static/chunks/f459ca74b978e494032d669fb86bb7ecc09693a8.8198a79878ca1034e2fb.js\",\"static/css/a47949adfb78dd8daf38.css\",\"static/chunks/pages/actualites-6e702e1fc0e666214934.js\"],\"/actualites/[slug]\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/75fc9c18.d332859c3b984f80e31e.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/f459ca74b978e494032d669fb86bb7ecc09693a8.8198a79878ca1034e2fb.js\",\"static/chunks/29d6b31b3e3a81f9c04f026c55b1e256987b101a.76565335238a0da5e7a7.js\",\"static/css/9a58648e87626f3004d9.css\",\"static/chunks/pages/actualites/[slug]-dc737afc799ce8397329.js\"],\"/references/[slug]\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/29d6b31b3e3a81f9c04f026c55b1e256987b101a.76565335238a0da5e7a7.js\",\"static/css/2529f22d55b1f95bce74.css\",\"static/chunks/pages/references/[slug]-4811edd518ead99ddaee.js\"]},\"ampFirstPages\":[]}");
+module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-3cb8f7ab5d3930a1a759.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/-l1bZvE6rQs-hAmvt0ET4/_buildManifest.js\",\"static/-l1bZvE6rQs-hAmvt0ET4/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/05d954cf.2ae3e6726cd92a9c3e83.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/3a98b9509c19a87958fdbd43eb4e76ce2188c4a8.21ed74d1cd4bb4fa5a37.js\",\"static/chunks/71247caf95475e3ea7f9a0f8a30beb258b23d005.f309cd1db327843e8351.js\",\"static/css/aff99bbf54e0bdc75436.css\",\"static/chunks/pages/index-d12c7fea8f42e481c7e4.js\"],\"/_app\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/3a98b9509c19a87958fdbd43eb4e76ce2188c4a8.21ed74d1cd4bb4fa5a37.js\",\"static/chunks/71247caf95475e3ea7f9a0f8a30beb258b23d005.f309cd1db327843e8351.js\",\"static/css/2866f83064c7f6970138.css\",\"static/chunks/pages/_app-8745e65bc74d23f6093c.js\"],\"/_error\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/pages/_error-ce534fd966ee61bb6f13.js\"],\"/actualites\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/75fc9c18.d332859c3b984f80e31e.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/3a98b9509c19a87958fdbd43eb4e76ce2188c4a8.21ed74d1cd4bb4fa5a37.js\",\"static/chunks/f459ca74b978e494032d669fb86bb7ecc09693a8.8198a79878ca1034e2fb.js\",\"static/css/cbf7d8b35e6ac2a60430.css\",\"static/chunks/pages/actualites-c864eca6c3ff488f9c9e.js\"],\"/actualites/[slug]\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/75fc9c18.d332859c3b984f80e31e.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/f459ca74b978e494032d669fb86bb7ecc09693a8.8198a79878ca1034e2fb.js\",\"static/chunks/29d6b31b3e3a81f9c04f026c55b1e256987b101a.76565335238a0da5e7a7.js\",\"static/css/8e9d6e623aa77fd41cd7.css\",\"static/chunks/pages/actualites/[slug]-d087a8751205a2ac38ef.js\"],\"/references/[slug]\":[\"static/chunks/main-72c3676897536d27450b.js\",\"static/chunks/webpack-50bee04d1dc61f8adf5b.js\",\"static/chunks/framework.0c239260661ae1d12aa2.js\",\"static/chunks/9423e0bdd9b074a69647ee8326a6ba5d0aedf51c.20fec5c88f13fe3215cf.js\",\"static/chunks/29d6b31b3e3a81f9c04f026c55b1e256987b101a.76565335238a0da5e7a7.js\",\"static/css/ddf30f1e2062acc2f4e6.css\",\"static/chunks/pages/references/[slug]-b572d3d8d9b968b69e2f.js\"]},\"ampFirstPages\":[]}");
 
 /***/ }),
 
@@ -65847,6 +65875,109 @@ function syntaxError(source, position, description) {
 
 /***/ }),
 
+/***/ "guR4":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticParams", function() { return unstable_getStaticParams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getServerProps", function() { return unstable_getServerProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
+/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Skye");
+var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t("Skye", 1);
+/* harmony import */ var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("LZ9C");
+var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t("LZ9C", 1);
+/* harmony import */ var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("67Bq");
+var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t("67Bq", 1);
+/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("7ZOo");
+/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__);
+
+      
+      
+      
+      
+      
+      
+  
+      
+      const { processEnv } = __webpack_require__("fXeI")
+      processEnv([{"path":".env.local","contents":"BACKEND_URL=https://fabrice.herokuapp.com\nNEXT_PUBLIC_API_URL=https://fabrice.herokuapp.com"}])
+    
+      
+      const runtimeConfig = {}
+      
+  
+      const appMod = __webpack_require__("1TCz")
+      let App = appMod.default || appMod.then && appMod.then(mod => mod.default);
+  
+      const compMod = __webpack_require__("oLGb")
+  
+      const Component = compMod.default || compMod.then && compMod.then(mod => mod.default)
+      /* harmony default export */ __webpack_exports__["default"] = (Component);
+      const getStaticProps = compMod['getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['getStaticProp' + 's'])
+      const getStaticPaths = compMod['getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['getStaticPath' + 's'])
+      const getServerSideProps = compMod['getServerSideProp' + 's'] || compMod.then && compMod.then(mod => mod['getServerSideProp' + 's'])
+  
+      // kept for detecting legacy exports
+      const unstable_getStaticParams = compMod['unstable_getStaticParam' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticParam' + 's'])
+      const unstable_getStaticProps = compMod['unstable_getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticProp' + 's'])
+      const unstable_getStaticPaths = compMod['unstable_getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticPath' + 's'])
+      const unstable_getServerProps = compMod['unstable_getServerProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getServerProp' + 's'])
+  
+      let config = compMod['confi' + 'g'] || (compMod.then && compMod.then(mod => mod['confi' + 'g'])) || {}
+      const _app = App
+  
+      const { renderReqToHTML, render } = Object(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__["getPageHandler"])({
+        pageModule: compMod,
+        pageComponent: Component,
+        pageConfig: config,
+        appModule: App,
+        documentModule: __webpack_require__("5w0S"),
+        errorModule: __webpack_require__("/a9y"),
+        notFoundModule: undefined,
+        pageGetStaticProps: getStaticProps,
+        pageGetStaticPaths: getStaticPaths,
+        pageGetServerSideProps: getServerSideProps,
+  
+        assetPrefix: "",
+        canonicalBase: "",
+        generateEtags: true,
+        poweredByHeader: true,
+  
+        runtimeConfig,
+        buildManifest: private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__,
+        reactLoadableManifest: private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__,
+  
+        rewrites: private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__.rewrites,
+        i18n: undefined,
+        page: "/references/[slug]",
+        buildId: "-l1bZvE6rQs-hAmvt0ET4",
+        escapedBuildId: "\-l1bZvE6rQs\-hAmvt0ET4",
+        basePath: "",
+        pageIsDynamic: true,
+        encodedPreviewProps: {previewModeId:"13ae8674ed434aac5759001bd38f2472",previewModeSigningKey:"42f45ef15e71655c38868958fa0da213c25bc333ccc8f863a4ebdb4cf0722fd4",previewModeEncryptionKey:"299560167b44a279c3a07a48ecb485cdc0dd276752c75e43e466962ff606863e"},
+        experimental: {
+          onError: next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"],
+          initServer: next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"],
+        }
+      })
+      
+    
+
+/***/ }),
+
 /***/ "h+wr":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -86442,109 +86573,6 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
-/***/ "redi":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticParams", function() { return unstable_getStaticParams; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getServerProps", function() { return unstable_getServerProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
-/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Skye");
-var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t("Skye", 1);
-/* harmony import */ var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("LZ9C");
-var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t("LZ9C", 1);
-/* harmony import */ var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("67Bq");
-var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t("67Bq", 1);
-/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("7ZOo");
-/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__);
-
-      
-      
-      
-      
-      
-      
-  
-      
-      const { processEnv } = __webpack_require__("fXeI")
-      processEnv([{"path":".env.local","contents":"BACKEND_URL=https://fabrice.herokuapp.com\nNEXT_PUBLIC_API_URL=https://fabrice.herokuapp.com"}])
-    
-      
-      const runtimeConfig = {}
-      
-  
-      const appMod = __webpack_require__("1TCz")
-      let App = appMod.default || appMod.then && appMod.then(mod => mod.default);
-  
-      const compMod = __webpack_require__("oLGb")
-  
-      const Component = compMod.default || compMod.then && compMod.then(mod => mod.default)
-      /* harmony default export */ __webpack_exports__["default"] = (Component);
-      const getStaticProps = compMod['getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['getStaticProp' + 's'])
-      const getStaticPaths = compMod['getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['getStaticPath' + 's'])
-      const getServerSideProps = compMod['getServerSideProp' + 's'] || compMod.then && compMod.then(mod => mod['getServerSideProp' + 's'])
-  
-      // kept for detecting legacy exports
-      const unstable_getStaticParams = compMod['unstable_getStaticParam' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticParam' + 's'])
-      const unstable_getStaticProps = compMod['unstable_getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticProp' + 's'])
-      const unstable_getStaticPaths = compMod['unstable_getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticPath' + 's'])
-      const unstable_getServerProps = compMod['unstable_getServerProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getServerProp' + 's'])
-  
-      let config = compMod['confi' + 'g'] || (compMod.then && compMod.then(mod => mod['confi' + 'g'])) || {}
-      const _app = App
-  
-      const { renderReqToHTML, render } = Object(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__["getPageHandler"])({
-        pageModule: compMod,
-        pageComponent: Component,
-        pageConfig: config,
-        appModule: App,
-        documentModule: __webpack_require__("5w0S"),
-        errorModule: __webpack_require__("/a9y"),
-        notFoundModule: undefined,
-        pageGetStaticProps: getStaticProps,
-        pageGetStaticPaths: getStaticPaths,
-        pageGetServerSideProps: getServerSideProps,
-  
-        assetPrefix: "",
-        canonicalBase: "",
-        generateEtags: true,
-        poweredByHeader: true,
-  
-        runtimeConfig,
-        buildManifest: private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__,
-        reactLoadableManifest: private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__,
-  
-        rewrites: private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__.rewrites,
-        i18n: undefined,
-        page: "/references/[slug]",
-        buildId: "_bNK9y4GIG4YdE3ui_5ft",
-        escapedBuildId: "_bNK9y4GIG4YdE3ui_5ft",
-        basePath: "",
-        pageIsDynamic: true,
-        encodedPreviewProps: {previewModeId:"cb7e617b951a57f101645dd802d1390c",previewModeSigningKey:"6a53ea8d16cf5e9f2937b49b93336ce6bd1b7ab1b03897167050dad5192eb369",previewModeEncryptionKey:"640a684388867c13316e1c93dd8ec943f340407e3bc6ad450f848718a789ab2c"},
-        experimental: {
-          onError: next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"],
-          initServer: next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"],
-        }
-      })
-      
-    
-
-/***/ }),
-
 /***/ "rlGK":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -94006,6 +94034,33 @@ function requirePropFactory(componentNameInError) {
 
 /***/ }),
 
+/***/ "uniG":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__("TqRt");
+
+var _interopRequireWildcard = __webpack_require__("284h");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__("q1tI"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__("8/g6"));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
+  d: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+}), 'Menu');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "uoyk":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -100902,10 +100957,11 @@ exports.pathToRegexp = pathToRegexp;
 // Exports
 module.exports = {
 	"desktopAppbar": "nav_desktopAppbar__1tj0x",
+	"icon": "nav_icon__kdnoR",
 	"btn": "nav_btn__252im",
 	"from_center": "nav_from_center__16tZE",
-	"mobileAppbar": "nav_mobileAppbar__2Um4-",
 	"mobileNav": "nav_mobileNav__3woNK",
+	"mobileAppbar": "nav_mobileAppbar__2Um4-",
 	"list": "nav_list__2NAAk"
 };
 
