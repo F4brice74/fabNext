@@ -21,7 +21,7 @@ Portfolio developped with :
 
 - Propulsed by the magic HeadlessCMS Strapi (https://strapi.io/)
 - Heroku
-- GraphQLM
+- GraphQL
 - MongoDB
 - Cloudinary
 
