@@ -24,7 +24,7 @@ import styles from "./bio.module.scss"
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const useStyles = makeStyles({
-    button: {
+    root: {
         marginTop: '10px',
         //marginLeft: '3em',
         background: 'linear-gradient(45deg, #204f75 30%, #4f81aa 90%)',
@@ -79,7 +79,7 @@ const Bio = () => {
                 <Grid item container direction="row" xs={12} md={8} justify="center">
                     <Grid item xs={5}>
                         <Button
-                            classes={{ root: classes.button, }}
+                            classes={{ root: classes.root, }}
                             variant="contained"
                             href="/actualites">
                             ACTUALITES
@@ -87,7 +87,7 @@ const Bio = () => {
                     </Grid>
                     <Grid item xs={5}>
                         <Button
-                            classes={{ root: classes.button, }}
+                            classes={{ root: classes.root, }}
                             variant="contained"
                             href="/#references"
                         >REFERENCES

@@ -69,7 +69,7 @@ const Intro = () => {
                             <p className={styles.intro_title}>Fabrice MIQUET-SAGE</p>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, y: '100px' }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'spring', bounce: 0.7, duration: 1 }}>
-                            <p className={styles.intro_baseline}>Je suis Freelance, <Typer dataText={msg} /></p>
+                            <div className={styles.intro_baseline}>Je suis Freelance, <Typer dataText={msg} /></div>
                         </motion.div>
                     </Grid>
                 </AnimatePresence>

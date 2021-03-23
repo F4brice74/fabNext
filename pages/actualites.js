@@ -70,7 +70,7 @@ export const getStaticProps = async ({ params }) => {
     if (loading) return <div className="circularProgress"><CircularProgress size={200} /></div>
     if (error) return <p>Error: {JSON.stringify(error)}</p>;
     const articles = data.articles;
-    console.log("articles", articles)
+    //console.log("articles", articles)
     return { props: { articles } }
 
 };

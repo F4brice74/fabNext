@@ -56,7 +56,8 @@ const useStyles = makeStyles({
 
 const References = ({ refstatic }) => {
     const classes = useStyles();
-
+    let sortrefstatic = refstatic.slice().sort(function(a,b){return b.rating - a.rating})
+//console.log("sortrefstatic from component", sortrefstatic)
     return (
        
         <Grid
@@ -76,9 +77,11 @@ const References = ({ refstatic }) => {
 
             //alignItems="center" >
             >
-                {refstatic.map(reference => (
-                    <AnimCard cardtoanimate={
-                        <Link href={`/references/${reference.slug}`} key={reference.id}>
+                {sortrefstatic.map(reference => (
+                    <AnimCard 
+                    key={reference.id}
+                    cardtoanimate={
+                        <Link href={`/references/${reference.slug}`} >
 
                             <Card
                                 classes={{ root: classes.card }}
